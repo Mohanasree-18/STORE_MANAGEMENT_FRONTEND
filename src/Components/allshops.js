@@ -10,7 +10,7 @@ const ShopList = () => {
     const fetchShops = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/api/shops/allshops"
+          "https://store-management-backend-2c74.vercel.app/allshops"
         );
         setShops(response.data);
       } catch (error) {
