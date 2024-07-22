@@ -1,2 +1,2 @@
-const BASE_URL = "http://localhost:8000/api/shops"; // Example URL
+const BASE_URL = "https://store-management-backend-2c74.vercel.app"; // Example URL
 export default BASE_URL;
