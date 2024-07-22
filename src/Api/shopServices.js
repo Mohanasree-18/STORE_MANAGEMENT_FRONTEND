@@ -4,7 +4,7 @@ import { getUserFromStorage } from "../utils/getUserFromStorage";
 
 //!LOGIN API
 export const loginAPI = async ({ email, password }) => {
-  const response = await axios.post("http://localhost:8000/api/shops/login", {
+  const response = await axios.post("https://store-management-backend-2c74.vercel.app/login", {
     email,
     password,
   });
@@ -25,7 +25,7 @@ export const registerAPI = async ({
   longitude,
 }) => {
   const response = await axios.post(
-    "http://localhost:8000/api/shops/register",
+    "https://store-management-backend-2c74.vercel.app/register",
     {
       shopName,
       email,
@@ -52,7 +52,7 @@ export const updateAPI = async (shopData) => {
     },
   };
   const response = await axios.put(
-    "http://localhost:8000/api/shops/update",
+    "https://store-management-backend-2c74.vercel.app/update",
     shopData,
     config
   );
@@ -69,7 +69,7 @@ export const deleteAPI = async () => {
     },
   };
   const response = await axios.delete(
-    "http://localhost:8000/api/shops/delete",
+    "https://store-management-backend-2c74.vercel.app/delete",
     config
   );
   return response.data;
@@ -85,7 +85,7 @@ export const nearAPI = async () => {
     },
   };
   const response = await axios.get(
-    "http://localhost:8000/api/shops/nearme",
+    "https://store-management-backend-2c74.vercel.app/nearme",
     config
   );
   return response.data;
@@ -103,7 +103,7 @@ export const searchAPI = async (query) => {
 
   // Construct the URL with the search query
   const response = await axios.get(
-    `http://localhost:8000/api/shops/search/${query}`,
+    `https://store-management-backend-2c74.vercel.app/search/${query}`,
     config
   );
 
